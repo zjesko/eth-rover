@@ -1,0 +1,10 @@
+version: '3'
+services:
+  ethrover:
+    build: .
+    environment:
+      RPC_URL: $RPC_URL
+    deploy:
+      replicas: 8
+    volumes:
+      - ./wallets/:/ethrover/wallets/
